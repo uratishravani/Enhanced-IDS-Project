@@ -1,0 +1,484 @@
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+
+/* ============================================================
+   MAIN CONTAINER
+============================================================ */
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.header {
+  background: #172554;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+/* ============================================================
+   FORM CARD
+============================================================ */
+
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-top: 0;
+  color: #172554;
+}
+
+
+/* ============================================================
+   INPUT GRID
+============================================================ */
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+
+/* ============================================================
+   INPUT GROUP
+============================================================ */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: #1f2937;
+}
+
+
+/* ============================================================
+   INPUT BOXES
+============================================================ */
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+
+  /* IMPORTANT: makes entered text visible */
+  color: #111827;
+
+  /* White background */
+  background-color: #ffffff;
+
+  /* Make sure text is not transparent */
+  opacity: 1;
+
+  /* Normal font */
+  font-family: Arial, sans-serif;
+}
+
+
+/* ============================================================
+   INPUT TEXT
+============================================================ */
+
+.input-group input {
+  color: #111827;
+  background-color: #ffffff;
+  caret-color: #111827;
+}
+
+
+/* ============================================================
+   SELECT TEXT
+============================================================ */
+
+.input-group select {
+  color: #111827;
+  background-color: #ffffff;
+}
+
+
+/* ============================================================
+   SELECT OPTIONS
+============================================================ */
+
+.input-group select option {
+  color: #111827;
+  background-color: #ffffff;
+}
+
+
+/* ============================================================
+   PLACEHOLDER
+============================================================ */
+
+.input-group input::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+
+/* ============================================================
+   INPUT FOCUS
+============================================================ */
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  color: #111827;
+  background-color: #ffffff;
+}
+
+
+/* ============================================================
+   NUMBER INPUT ARROWS
+============================================================ */
+
+.input-group input[type="number"] {
+  color: #111827;
+  background-color: #ffffff;
+}
+
+
+/* ============================================================
+   DETECT BUTTON
+============================================================ */
+
+.detect-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.detect-button:hover {
+  background: #1d4ed8;
+}
+
+.detect-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   RESET BUTTON
+============================================================ */
+
+.reset-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+
+  border: 1px solid #64748b;
+  border-radius: 8px;
+
+  background: white;
+  color: #334155;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #f1f5f9;
+}
+
+.reset-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   RESULT CARD
+============================================================ */
+
+.result-card {
+  margin-top: 25px;
+  padding: 25px;
+
+  background: white;
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.result-card p {
+  margin: 8px 0;
+}
+
+
+/* ============================================================
+   NORMAL / ATTACK
+============================================================ */
+
+.normal {
+  color: #15803d;
+}
+
+.attack {
+  color: #dc2626;
+}
+
+
+/* ============================================================
+   SHAP CARD
+============================================================ */
+
+.shap-card {
+  margin-top: 25px;
+  padding: 25px;
+
+  background: white;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.shap-card h2 {
+  margin-top: 0;
+  color: #172554;
+  text-align: center;
+}
+
+.shap-description {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+
+/* ============================================================
+   SHAP LIST
+============================================================ */
+
+.shap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* ============================================================
+   SHAP ITEM
+============================================================ */
+
+.shap-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+
+/* ============================================================
+   SHAP RANK
+============================================================ */
+
+.shap-rank {
+  min-width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #172554;
+  color: white;
+
+  font-weight: bold;
+}
+
+
+/* ============================================================
+   SHAP FEATURE INFORMATION
+============================================================ */
+
+.shap-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.shap-info strong {
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.shap-info span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* ============================================================
+   SHAP POSITIVE
+============================================================ */
+
+.shap-positive {
+  min-width: 100px;
+
+  text-align: right;
+
+  color: #dc2626;
+
+  font-weight: bold;
+}
+
+
+/* ============================================================
+   SHAP NEGATIVE
+============================================================ */
+
+.shap-negative {
+  min-width: 100px;
+
+  text-align: right;
+
+  color: #15803d;
+
+  font-weight: bold;
+}
+
+
+/* ============================================================
+   SHAP NOTE
+============================================================ */
+
+.shap-note {
+  margin-top: 20px;
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #334155;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   MOBILE / TABLET
+============================================================ */
+
+@media (max-width: 800px) {
+
+  .input-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 550px) {
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .header {
+    padding: 22px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .shap-item {
+    gap: 10px;
+  }
+
+  .shap-positive,
+  .shap-negative {
+    min-width: 75px;
+    font-size: 13px;
+  }
+
+}
